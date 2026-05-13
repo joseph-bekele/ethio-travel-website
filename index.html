@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethiopian Wonders - Travel & Booking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">🌍</span>
+                <span class="logo-text">Ethiopian Wonders</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#booking">Book Now</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Discover Ethiopia's Magic</h1>
+            <p class="hero-subtitle">Experience ancient wonders, vibrant culture, and breathtaking landscapes</p>
+            <button class="cta-button" onclick="document.getElementById('destinations').scrollIntoView({behavior: 'smooth'})">Explore Now</button>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- Destinations Section -->
+    <section id="destinations" class="destinations">
+        <h2 class="section-title">Featured Destinations</h2>
+        <div class="destinations-grid">
+            <!-- Destination Card 1: Lalibela -->
+            <div class="destination-card">
+                <div class="card-image" style="background: url('https://images.unsplash.com/photo-1606576799696-d9d09ea05d2e?w=500&h=300&fit=crop') center/cover;"></div>
+                <div class="card-content">
+                    <h3>Lalibela</h3>
+                    <div class="destination-info">
+                        <p><span class="info-label">Distance from Addis Ababa:</span> <strong>638 km (9-10 hours)</strong></p>
+                        <p><span class="info-label">Languages:</span> <strong>Amharic, Agaw</strong></p>
+                        <p><span class="info-label">Altitude:</span> <strong>2,600 m</strong></p>
+                    </div>
+                    <p class="description">Home to the famous rock-hewn churches dating back to the 12th century. A UNESCO World Heritage site and one of Ethiopia's most sacred pilgrimage destinations.</p>
+                    <div class="features">
+                        <span class="feature-tag">🏛️ Historical</span>
+                        <span class="feature-tag">⛪ Religious</span>
+                        <span class="feature-tag">📸 Scenic</span>
+                    </div>
+                    <button class="view-btn" onclick="openDestinationModal(this)">View Details</button>
+                </div>
+            </div>
+
+            <!-- Destination Card 2: Simien Mountains -->
+            <div class="destination-card">
+                <div class="card-image" style="background: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=300&fit=crop') center/cover;"></div>
+                <div class="card-content">
+                    <h3>Simien Mountains</h3>
+                    <div class="destination-info">
+                        <p><span class="info-label">Distance from Addis Ababa:</span> <strong>330 km (5-6 hours)</strong></p>
+                        <p><span class="info-label">Languages:</span> <strong>Amharic, Tigrinya</strong></p>
+                        <p><span class="info-label">Altitude:</span> <strong>4,550 m</strong></p>
+                    </div>
+                    <p class="description">A dramatic mountain range with stunning escarpments, deep valleys, and rare wildlife including the Ethiopian wolf and Gelada baboons.</p>
+                    <div class="features">
+                        <span class="feature-tag">🏔️ Trekking</span>
+                        <span class="feature-tag">🦁 Wildlife</span>
+                        <span class="feature-tag">🌄 Nature</span>
+                    </div>
+                    <button class="view-btn" onclick="openDestinationModal(this)">View Details</button>
+                </div>
+            </div>
+
+            <!-- Destination Card 3: Axum -->
+            <div class="destination-card">
+                <div class="card-image" style="background: url('https://images.unsplash.com/photo-1548013146-72d90c4d6d59?w=500&h=300&fit=crop') center/cover;"></div>
+                <div class="card-content">
+                    <h3>Axum (Aksum)</h3>
+                    <div class="destination-info">
+                        <p><span class="info-label">Distance from Addis Ababa:</span> <strong>555 km (8-9 hours)</strong></p>
+                        <p><span class="info-label">Languages:</span> <strong>Tigrinya, Amharic</strong></p>
+                        <p><span class="info-label">Altitude:</span> <strong>2,131 m</strong></p>
+                    </div>
+                    <p class="description">Ancient capital of the Aksumite Empire featuring massive stone stelae, historical artifacts, and the Church of St. Mary of Zion.</p>
+                    <div class="features">
+                        <span class="feature-tag">⛩️ Ancient</span>
+                        <span class="feature-tag">🏺 Archaeology</span>
+                        <span class="feature-tag">🌟 Cultural</span>
+                    </div>
+                    <button class="view-btn" onclick="openDestinationModal(this)">View Details</button>
+                </div>
+            </div>
+
+            <!-- Destination Card 4: Danakil Depression -->
+            <div class="destination-card">
+                <div class="card-image" style="background: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=300&fit=crop') center/cover;"></div>
+                <div class="card-content">
+                    <h3>Danakil Depression</h3>
+                    <div class="destination-info">
+                        <p><span class="info-label">Distance from Addis Ababa:</span> <strong>500 km (8-9 hours)</strong></p>
+                        <p><span class="info-label">Languages:</span> <strong>Afar</strong></p>
+                        <p><span class="info-label">Altitude:</span> <strong>-116 m (below sea level)</strong></p>
+                    </div>
+                    <p class="description">One of the hottest and most inhospitable places on Earth, featuring colorful geothermal features, salt flats, and otherworldly landscapes.</p>
+                    <div class="features">
+                        <span class="feature-tag">🌋 Geothermal</span>
+                        <span class="feature-tag">🌅 Unique</span>
+                        <span class="feature-tag">🚴 Adventure</span>
+                    </div>
+                    <button class="view-btn" onclick="openDestinationModal(this)">View Details</button>
+                </div>
+            </div>
+
+            <!-- Destination Card 5: Awash National Park -->
+            <div class="destination-card">
+                <div class="card-image" style="background: url('https://images.unsplash.com/photo-1516426122078-c23e76319801?w=500&h=300&fit=crop') center/cover;"></div>
+                <div class="card-content">
+                    <h3>Awash National Park</h3>
+                    <div class="destination-info">
+                        <p><span class="info-label">Distance from Addis Ababa:</span> <strong>225 km (3-4 hours)</strong></p>
+                        <p><span class="info-label">Languages:</span> <strong>Oromo, Amharic</strong></p>
+                        <p><span class="info-label">Altitude:</span> <strong>1,500-2,400 m</strong></p>
+                    </div>
+                    <p class="description">Home to diverse wildlife including lions, giraffes, and gazelles. Features the scenic Awash waterfall and volcanic landscapes.</p>
+                    <div class="features">
+                        <span class="feature-tag">🦁 Safari</span>
+                        <span class="feature-tag">💧 Waterfalls</span>
+                        <span class="feature-tag">🌳 Nature</span>
+                    </div>
+                    <button class="view-btn" onclick="openDestinationModal(this)">View Details</button>
+                </div>
+            </div>
+
+            <!-- Destination Card 6: Lake Tana -->
+            <div class="destination-card">
+                <div class="card-image" style="background: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=300&fit=crop') center/cover;"></div>
+                <div class="card-content">
+                    <h3>Lake Tana</h3>
+                    <div class="destination-info">
+                        <p><span class="info-label">Distance from Addis Ababa:</span> <strong>305 km (5-6 hours)</strong></p>
+                        <p><span class="info-label">Languages:</span> <strong>Amharic, Agaw</strong></p>
+                        <p><span class="info-label">Altitude:</span> <strong>1,830 m</strong></p>
+                    </div>
+                    <p class="description">Ethiopia's largest lake with numerous islands containing ancient monasteries, beautiful landscapes, and the Blue Nile Falls.</p>
+                    <div class="features">
+                        <span class="feature-tag">⛪ Monasteries</span>
+                        <span class="feature-tag">🚤 Cruising</span>
+                        <span class="feature-tag">📸 Photography</span>
+                    </div>
+                    <button class="view-btn" onclick="openDestinationModal(this)">View Details</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destination Modal -->
+    <div id="destinationModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeDestinationModal()">&times;</span>
+            <div id="modalBody"></div>
+            <div class="modal-actions">
+                <button class="modal-btn" onclick="document.getElementById('booking').scrollIntoView({behavior: 'smooth'}); closeDestinationModal();">Book This Trip</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Map Section -->
+    <section id="maps" class="maps-section">
+        <h2 class="section-title">Interactive Map</h2>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d1008206.4765640017!2d38.74679!3d9.1383!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2set!4v1234567890" 
+                    width="100%" height="500" style="border:0; border-radius: 15px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <!-- Hotel Booking Section -->
+    <section id="hotels" class="hotels-section">
+        <h2 class="section-title">Hotel Recommendations</h2>
+        <div class="hotels-grid">
+            <div class="hotel-card">
+                <div class="hotel-image" style="background: url('https://images.unsplash.com/photo-1542314503-37143e4b8b2d?w=400&h=200&fit=crop') center/cover;"></div>
+                <div class="hotel-info">
+                    <h3>Luxury Mountain Lodge</h3>
+                    <p class="hotel-location">📍 Simien Mountains</p>
+                    <div class="rating">★★★★★ 4.8/5</div>
+                    <p class="hotel-description">Premium accommodation with stunning mountain views, all-inclusive trekking packages, and local guides.</p>
+                    <div class="price">$180 <span>/night</span></div>
+                    <button class="book-hotel-btn" onclick="selectHotel(this)">Book Hotel</button>
+                </div>
+            </div>
+
+            <div class="hotel-card">
+                <div class="hotel-image" style="background: url('https://images.unsplash.com/photo-1564078516577-f3dbb13129fe?w=400&h=200&fit=crop') center/cover;"></div>
+                <div class="hotel-info">
+                    <p class="hotel-location">📍 Lalibela</p>
+                    <div class="rating">★★★★☆ 4.6/5</div>
+                    <p class="hotel-description">Boutique hotel near the rock churches with traditional architecture and authentic Ethiopian dining.</p>
+                    <div class="price">$150 <span>/night</span></div>
+                    <button class="book-hotel-btn" onclick="selectHotel(this)">Book Hotel</button>
+                </div>
+            </div>
+
+            <div class="hotel-card">
+                <div class="hotel-image" style="background: url('https://images.unsplash.com/photo-1551632786-1e5ba2dae9b5?w=400&h=200&fit=crop') center/cover;"></div>
+                <div class="hotel-info">
+                    <h3>Axum Historical Inn</h3>
+                    <p class="hotel-location">📍 Axum</p>
+                    <div class="rating">★★★★☆ 4.5/5</div>
+                    <p class="hotel-description">Modern comfort with historical charm, featuring guided tours and local cultural experiences.</p>
+                    <div class="price">$120 <span>/night</span></div>
+                    <button class="book-hotel-btn" onclick="selectHotel(this)">Book Hotel</button>
+                </div>
+            </div>
+
+            <div class="hotel-card">
+                <div class="hotel-image" style="background: url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&h=200&fit=crop') center/cover;"></div>
+                <div class="hotel-info">
+                    <h3>Danakil Adventure Camp</h3>
+                    <p class="hotel-location">📍 Danakil Depression</p>
+                    <div class="rating">★★★★☆ 4.4/5</div>
+                    <p class="hotel-description">Unique lodging experience for adventure seekers, equipped with all safety features and experienced staff.</p>
+                    <div class="price">$200 <span>/night</span></div>
+                    <button class="book-hotel-btn" onclick="selectHotel(this)">Book Hotel</button>
+                </div>
+            </div>
+
+            <div class="hotel-card">
+                <div class="hotel-image" style="background: url('https://images.unsplash.com/photo-1551874013-0ee88e1d75d7?w=400&h=200&fit=crop') center/cover;"></div>
+                <div class="hotel-info">
+                    <h3>Awash Safari Lodge</h3>
+                    <p class="hotel-location">📍 Awash National Park</p>
+                    <div class="rating">★★★★☆ 4.5/5</div>
+                    <p class="hotel-description">Wildlife viewing lodges with professional safari guides and game drives included.</p>
+                    <div class="price">$160 <span>/night</span></div>
+                    <button class="book-hotel-btn" onclick="selectHotel(this)">Book Hotel</button>
+                </div>
+            </div>
+
+            <div class="hotel-card">
+                <div class="hotel-image" style="background: url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=400&h=200&fit=crop') center/cover;"></div>
+                <div class="hotel-info">
+                    <h3>Tana Island Monastery Resort</h3>
+                    <p class="hotel-location">📍 Lake Tana</p>
+                    <div class="rating">★★★★★ 4.7/5</div>
+                    <p class="hotel-description">Island retreat with boat tours to ancient monasteries and water activities.</p>
+                    <div class="price">$175 <span>/night</span></div>
+                    <button class="book-hotel-btn" onclick="selectHotel(this)">Book Hotel</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking System Section -->
+    <section id="booking" class="booking-section">
+        <h2 class="section-title">Complete Your Booking</h2>
+        <div class="booking-container">
+            <form id="bookingForm" class="booking-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nationality">Nationality</label>
+                        <input type="text" id="nationality" name="nationality" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="destination">Select Destination</label>
+                        <select id="destination" name="destination" required>
+                            <option value="">Choose a destination...</option>
+                            <option value="Lalibela">Lalibela</option>
+                            <option value="Simien Mountains">Simien Mountains</option>
+                            <option value="Axum">Axum (Aksum)</option>
+                            <option value="Danakil Depression">Danakil Depression</option>
+                            <option value="Awash National Park">Awash National Park</option>
+                            <option value="Lake Tana">Lake Tana</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="hotel">Select Hotel</label>
+                        <select id="hotel" name="hotel" required>
+                            <option value="">Choose a hotel...</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="checkIn">Check-in Date</label>
+                        <input type="date" id="checkIn" name="checkIn" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="checkOut">Check-out Date</label>
+                        <input type="date" id="checkOut" name="checkOut" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="guests">Number of Guests</label>
+                        <input type="number" id="guests" name="guests" min="1" value="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="packageType">Package Type</label>
+                        <select id="packageType" name="packageType" required>
+                            <option value="">Choose a package...</option>
+                            <option value="Standard">Standard - $1,200</option>
+                            <option value="Premium">Premium - $2,500</option>
+                            <option value="Luxury">Luxury - $4,500</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group-full">
+                    <label for="specialRequests">Special Requests</label>
+                    <textarea id="specialRequests" name="specialRequests" rows="4" placeholder="Any special dietary needs, accessibility requirements, or preferences..."></textarea>
+                </div>
+
+                <div class="booking-summary">
+                    <h3>Booking Summary</h3>
+                    <div class="summary-item">
+                        <span>Hotel Nights:</span>
+                        <span id="nightsCount">0</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Total Guests:</span>
+                        <span id="guestsCount">1</span>
+                    </div>
+                    <div class="summary-item price-total">
+                        <span>Estimated Total:</span>
+                        <span id="totalPrice">$0</span>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Complete Booking</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2 class="section-title">Get in Touch</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span class="contact-icon">📞</span>
+                    <div>
+                        <h3>Phone</h3>
+                        <p>+251 11 234 5678</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📧</span>
+                    <div>
+                        <h3>Email</h3>
+                        <p>info@ethiopianwonders.com</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📍</span>
+                    <div>
+                        <h3>Address</h3>
+                        <p>Addis Ababa, Ethiopia</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">🕐</span>
+                    <div>
+                        <h3>Hours</h3>
+                        <p>Mon - Fri: 9:00 - 18:00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Ethiopian Wonders Travel. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
